@@ -69,18 +69,12 @@ console.log(greeting);
 // Script 2 - Sum calculation
 
 let num1 = 5, num2 = 10;
-// let sum = num1 + num2;
-// console.log("The sum of 5 and 10 is " + sum);
-
-// Create function with 2 parameters, a, b
-// log a sentence with the sum
-// return sum of a and b
-function addNumbers(a, b) {
-    let sum = a + b;
-    console.log(`The sum of ${a} and ${b} is ${sum}`);
-    return sum;
+function addNumbers(a, b) //Created function with parameters a and b
+{
+    let sum = a + b;     //Assigned ressult of addition to sum variable
+    console.log(`The sum of ${a} and ${b} is ${sum}`); //print the output
+    return sum; //return sum
 }
-
 let num3 = 6, num4 = 15;
 addNumbers(5, 10);
 addNumbers(num1, num2);
@@ -90,8 +84,6 @@ console.log(addNumbers(2, 24));
 // Script 3 - Product calculation
 
 let product = num1 * num2;
-// console.log("The product of 5 and 10 is " + product);
-
 function multiplyNumbers(a, b) {
     let product = a * b;
     console.log(`The product of ${a} and ${b} is ${product}`);
@@ -105,11 +97,6 @@ console.log(multiplyNumbers(2, 24));
 // Script 4 - Print names from a list
 
 let names = ["Alice", "Bob", "Charlie"];
-// console.log("Names in the list:");
-// for (let i = 0; i < names.length; i++) {
-//     console.log(names[i]);
-// }
-
 let moreNames = ["David", "Emma", "Fred"];
 
 function printNames(nameList) {

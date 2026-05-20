@@ -36,7 +36,12 @@ reusable functions that solve specific tasks. This activity encourages:
 // 3. Capitalize the role if needed.
 // 4. Return the result.
 
-
+function generateBadge(name,role){
+     role = role.charAt(0).toUpperCase() + role.slice(1);
+    console.log(`Name: ${name}, Role: ${role}`);
+    return role;
+}
+generateBadge("Alice", "speaker");
 // ============================================
 // 🧩 Task 2: Calculate Event Cost
 // ============================================
@@ -52,6 +57,21 @@ reusable functions that solve specific tasks. This activity encourages:
 // 4. Return the final total.
 
 
+function eventCost(numberofAttendee, costPerAttendee){
+let totalCost = numberofAttendee * costPerAttendee;
+if(numberofAttendee > 100)
+{
+    let discount = totalCost * 0.1;
+    totalCost = totalCost - discount;
+    console.log("Total cost with discount: ", totalCost);
+    return totalCost;
+}
+else
+{
+    console.log(totalCost);
+}
+}
+eventCost(101, 10);
 // ============================================
 // 🧩 Task 3: Validate Email
 // ============================================
@@ -63,6 +83,35 @@ reusable functions that solve specific tasks. This activity encourages:
 // Steps:
 // 1. Check if the string includes both "@" and ".".
 // 2. Return true or false accordingly.
+
+
+function validEmail(email)
+{
+    let check1 = false;
+    let check2 = false;
+    for(let i = 0; i < email.length; i++)
+    {
+        if(email[i] === "@")
+        {
+            check1 = true;
+        }
+        if(email[i] === ".")
+        {
+            check2 = true;
+        }
+    }
+        if(check1 === true && check2 === true)
+        {
+            return true;
+        }
+        else
+        {
+           return false;
+        }
+}
+console.log(validEmail("example@gmail.com"));
+console.log(validEmail("examplegmail.com"));
+console.log(validEmail("example@gmailcom"));
 
 
 // ============================================
